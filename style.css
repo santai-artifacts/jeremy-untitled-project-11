@@ -5,6 +5,7 @@
   --grid-b: #d4eedb;
   --snake: #facc15;
   --snake-head: #fde047;
+  --leaf: #22c55e;
   --food: #ef4444;
   --text: #1c2238;
   --muted: #6b7395;
@@ -49,7 +50,7 @@ body {
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: -0.02em;
-  background: linear-gradient(120deg, var(--snake), var(--accent));
+  background: linear-gradient(120deg, var(--snake), var(--leaf));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
