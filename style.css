@@ -1,11 +1,11 @@
 :root {
-  --bg: #f4f5fb;
+  --bg: #e6f4ea;
   --panel: #ffffff;
-  --grid-a: #e9ecf6;
-  --grid-b: #f1f3fa;
-  --snake: #ec4899;
-  --snake-head: #f9a8d4;
-  --food: #f59e0b;
+  --grid-a: #c7e9d0;
+  --grid-b: #d4eedb;
+  --snake: #facc15;
+  --snake-head: #fde047;
+  --food: #ef4444;
   --text: #1c2238;
   --muted: #6b7395;
   --accent: #6366f1;
@@ -26,8 +26,8 @@ body {
   font-family: "Poppins", system-ui, sans-serif;
   color: var(--text);
   background:
-    radial-gradient(900px 600px at 20% -10%, #e3e8ff 0%, transparent 60%),
-    radial-gradient(800px 500px at 110% 110%, #ffe1f0 0%, transparent 55%),
+    radial-gradient(900px 600px at 20% -10%, #c8ecd3 0%, transparent 60%),
+    radial-gradient(800px 500px at 110% 110%, #d6f0c2 0%, transparent 55%),
     var(--bg);
 }
 
@@ -108,7 +108,7 @@ body {
   place-items: center;
   padding: 24px;
   text-align: center;
-  background: rgba(244, 245, 251, 0.8);
+  background: rgba(230, 244, 234, 0.8);
   backdrop-filter: blur(6px);
   transition: opacity 0.25s ease, visibility 0.25s ease;
 }
@@ -149,12 +149,12 @@ body {
   border-radius: 999px;
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
-  box-shadow: 0 10px 24px rgba(236, 72, 153, 0.3);
+  box-shadow: 0 10px 24px rgba(250, 204, 21, 0.35);
 }
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 30px rgba(236, 72, 153, 0.4);
+  box-shadow: 0 14px 30px rgba(250, 204, 21, 0.45);
 }
 
 .btn:active {
