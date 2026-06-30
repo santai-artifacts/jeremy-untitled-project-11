@@ -98,6 +98,34 @@
       ctx.fillStyle = i === 0 ? colors.head : colors.snake;
       roundedCell(seg.x, seg.y, 0.32);
     });
+
+    // Eyes on the head, facing the current direction.
+    drawEyes(snake[0], dir);
+  }
+
+  function drawEyes(head, facing) {
+    const cx = head.x * CELL + CELL / 2;
+    const cy = head.y * CELL + CELL / 2;
+    // Perpendicular axis to space the two eyes apart.
+    const perp = { x: -facing.y, y: facing.x };
+    const forward = CELL * 0.18; // shift toward the front
+    const spread = CELL * 0.22;  // gap between the eyes
+    const eyeR = CELL * 0.13;
+    const pupilR = eyeR * 0.55;
+
+    for (const s of [-1, 1]) {
+      const ex = cx + facing.x * forward + perp.x * spread * s;
+      const ey = cy + facing.y * forward + perp.y * spread * s;
+      ctx.fillStyle = "#ffffff";
+      ctx.beginPath();
+      ctx.arc(ex, ey, eyeR, 0, Math.PI * 2);
+      ctx.fill();
+      // Pupil nudged toward the direction of travel.
+      ctx.fillStyle = "#1c2238";
+      ctx.beginPath();
+      ctx.arc(ex + facing.x * eyeR * 0.35, ey + facing.y * eyeR * 0.35, pupilR, 0, Math.PI * 2);
+      ctx.fill();
+    }
   }
 
   function roundedCell(cx, cy, radiusFactor) {
