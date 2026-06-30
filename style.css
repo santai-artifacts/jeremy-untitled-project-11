@@ -1,13 +1,13 @@
 :root {
-  --bg: #0f1220;
-  --panel: #1a1f35;
-  --grid-a: #161b30;
-  --grid-b: #1b2138;
-  --snake: #4ade80;
-  --snake-head: #86efac;
-  --food: #f472b6;
-  --text: #e6e9f5;
-  --muted: #9aa3c7;
+  --bg: #f4f5fb;
+  --panel: #ffffff;
+  --grid-a: #e9ecf6;
+  --grid-b: #f1f3fa;
+  --snake: #ec4899;
+  --snake-head: #f9a8d4;
+  --food: #f59e0b;
+  --text: #1c2238;
+  --muted: #6b7395;
   --accent: #6366f1;
   --radius: 16px;
 }
@@ -26,8 +26,8 @@ body {
   font-family: "Poppins", system-ui, sans-serif;
   color: var(--text);
   background:
-    radial-gradient(900px 600px at 20% -10%, #232a4a 0%, transparent 60%),
-    radial-gradient(800px 500px at 110% 110%, #2a2050 0%, transparent 55%),
+    radial-gradient(900px 600px at 20% -10%, #e3e8ff 0%, transparent 60%),
+    radial-gradient(800px 500px at 110% 110%, #ffe1f0 0%, transparent 55%),
     var(--bg);
 }
 
@@ -67,7 +67,8 @@ body {
   min-width: 64px;
   padding: 8px 12px;
   background: var(--panel);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(28, 34, 56, 0.08);
+  box-shadow: 0 2px 8px rgba(28, 34, 56, 0.05);
   border-radius: 12px;
 }
 
@@ -89,8 +90,8 @@ body {
   aspect-ratio: 1;
   border-radius: var(--radius);
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(28, 34, 56, 0.1);
+  box-shadow: 0 24px 60px rgba(28, 34, 56, 0.16);
 }
 
 .board {
@@ -107,7 +108,7 @@ body {
   place-items: center;
   padding: 24px;
   text-align: center;
-  background: rgba(15, 18, 32, 0.82);
+  background: rgba(244, 245, 251, 0.8);
   backdrop-filter: blur(6px);
   transition: opacity 0.25s ease, visibility 0.25s ease;
 }
@@ -148,12 +149,12 @@ body {
   border-radius: 999px;
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
-  box-shadow: 0 10px 24px rgba(74, 222, 128, 0.3);
+  box-shadow: 0 10px 24px rgba(236, 72, 153, 0.3);
 }
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 30px rgba(74, 222, 128, 0.4);
+  box-shadow: 0 14px 30px rgba(236, 72, 153, 0.4);
 }
 
 .btn:active {
